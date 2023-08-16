@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Saira Condensed", sans-serif;
+}
+
+/* scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #144136;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #8fc1b5;
+}
+
+header {
+  background-color: #144136;
+}
+
+.navbar {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.logo {
+  color: #e1e1e1;
+  font-size: 20px;
+  width: 50%;
+}
+
+header > .navbar {
+/* flex permite que os elementos se adequem de acordo com a tela do dispositivo */
+  display: flex;
+}
+
+.menu {
+  text-align: right;
+  width: 50%;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu li {
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 30px;
+  margin-top: 5px;
+}
+
+.menu a {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #93afa2;
+}
+
+.bem-vindos {
+  background-color: #265c4b;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.bem-vindos img {
+  height: 40px;
+  width: 40px;
+}
+
+.bem-vindos h2 {
+  font-size: 15px;
+  font-family: "Saira Condensed", sans-serif;
+  color: #e1e1e1;
+}
+
+.titulo {
+  text-align: center;
+  color: #144136;
+  font-size: 20px;
+  border-bottom: 2px solid #8fc1b5;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.barra-inicio img{
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.loja {
+  padding: 30px 0;
+}
+
+section.loja > .navbar {
+  display: flex;
+}
+
+.loja-conteudo {
+  width: 33.3%;
+  padding: 20px;
+}
+
+.categoria {
+  height: 100%;
+}
+
+.categoria img {
+  width: 100%;
+  transition-duration: 0.4s;
+}
+
+.categoria img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.categoria p {
+  text-align: left;
+}
+
+.categoria h1 {
+  font-size: 10px;
+}
+
+.barra img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.inverno p {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* fazendo painel 3d nas imagens */
+.container {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;/* alinhar os itens horizontalmente */
+}
+
+.imagens-container {
+  width: 319px;
+  perspective: 1000px; /* faz a imagem girar quando o mouse é passado sobre ela */
+}
+
+.imagens-container img {
+  width: 100%;
+}
+
+.front,
+.back {
+  position: absolute;
+  backface-visibility: hidden; /* oculta o elemento que está atrás */
+  transform-style: preserve-3d; /* mantendo a perspectiva e profundidade corretas, em relação ao elemento pai */
+  transition: all 3s ease; /* criando uma animação sua */
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.imagens-container:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.imagens-container:hover .back {
+  transform: rotateY(0deg);
+}
+
+/* barrinha animada */
+.fim {
+  animation: gradiente 10s ease infinite; /* animação aplicada no plano de fundo, componente para o código do keyframes funcionar */
+  align-items: center; /* centralizando o conteúdo verticalmente */
+  display: flex;
+  justify-content: center; /* centralizando o conteúdo horizontalmente */
+  background: linear-gradient(-45deg, #265c4b, #50867b, #235545, #8FC1B5)
+    no-repeat; /* comentário separado */
+  background-size: 300% 300%; /* define o tamanho do gradiente, a largura é definida como 30% da largura do elemento pai, e a altura é definida como 300% da altura do elemento pai */
+  height: 25vh;
+  margin-top: 600px;
+  max-width: 1440px;
+}
+
+@keyframes gradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fim p {
+  color: #e1e1e1;
+  text-align: center;
+}
+
+.icones {
+  display: flex;
+  justify-content: center;
+}
+
+.imagens {
+  display: flex;
+  justify-content: center;
+}
+
+.imagens img {
+  padding: 10px;
+}
+
+.fim h2, h3 {
+  text-align: center;
+  font-size: 15px;
+  color: #e1e1e1;
+  margin-top: 5px;
+}

@@ -1,0 +1,293 @@
+* {/* estabelecendo coisas para toda a página */
+  box-sizing: border-box; /*  indica que o tamanho agora levará em conta até a borda */
+  margin: 0; /* estabeleça que não deve haver nenhuma margem em nenhum elemento */
+  padding: 0; /* establece que não deve haver nenhum preenchimento em nenhum elemento */
+  font-family: "Saira Condensed", sans-serif; /* fonte utilizada */
+}
+
+body,
+html {
+  scroll-behavior: smooth; /* a rolagem será realizada de forma suave e animada (parte de contato da página inicial) */
+}
+
+/* scroll */
+::-webkit-scrollbar { /* definindo a largura da barra de rolagem */
+  width: 10px;
+}
+
+::-webkit-scrollbar-track { /* colocando cor personalizada na parte de trás do scroll */
+  background: #144136;
+}
+
+::-webkit-scrollbar-thumb { /* estilizando a parte que sobe e desce do scroll */
+  border-radius: 5px;
+  background: #8fc1b5;
+}
+
+/* primeiro header */
+header {
+  background-color: #144136;
+}
+
+/* configurando a navbar (header) */
+.navbar {
+  max-width: 1140px;
+  margin: 0 auto; /* centraliza horizontalmente a barra de navegação na página */
+  padding: 0 2%; /*  define um espaçamento interno para a barra de navegação */
+} 
+
+.navbar img {
+  max-width: 400px;
+  height: auto;
+}
+
+/* arrumando logo da loja na primeira navbar */
+.logo {
+  color: #e1e1e1;
+  font-size: 20px;
+  width: 50%;
+}
+
+header > .navbar { /* os elementos dentro do elemento com a classe .navbar poderão se adequar de acordo com a tela do dispositivo em que a página está sendo exibida */
+  display: flex; /* flex permite que os elementos se adequem de acordo com a tela do dispositivo */
+}
+
+/* estilizando o meu menu do desktop */
+.menu-desktop {
+  text-align: right; /* texto alinhado na direita */
+  width: 50%;
+}
+
+.menu-desktop ul {
+  list-style-type: none; /* tirando decoração da lista */
+}
+
+.menu-desktop li {
+  display: inline-block; /* fazendo os itens ficarem na mesma linha, na horizontal */
+  font-size: 12px;
+  margin-right: 30px;
+  margin-top: 5px;
+}
+
+.menu-desktop a {
+  color: #e1e1e1;
+  text-decoration: none; /* tirando a decoração automática */
+}
+
+.menu-desktop a:hover { /* criando efeito para quando o mouse passar por cima */
+  color: #93afa2;
+  width: 100%;
+}
+
+/* estilizando o meu menu do mobile */
+.menu-mobile {/* seletor */
+  /* display (propriedade) e none (valor) */
+  display: none; /* fazendo com que o menu-mobile suma e só apareça nas condições feitas la embaixo */
+}
+
+.menu-mobile ul {
+  position: absolute; /* absolute deixa um elemento sobreposto a todos os outros */
+  width: 100%;
+  background-color: #265c4b;
+  left: 0;
+  padding: 30px/* top */ 0/* direita */ 10px/* baixo */ 0/* esquerda */;
+  text-align: center;
+  top: 0;
+
+}
+
+.menu-mobile i {
+  position: absolute;
+  z-index: 2;
+  color: #e1e1e1;
+  cursor: pointer;
+  right: 0;
+  padding: 5px 20px;
+}
+
+.menu-mobile li {
+  padding: 1.5px;
+}
+
+.menu-mobile a {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+
+.menu-mobile a:hover {
+  color: #93afa2;
+  width: 100%;
+}
+
+/* conteúdo da segunda navbar (segundo header) */
+.bem-vindos {
+  background-color: #265c4b;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.bem-vindos img {
+  height: 50px;
+  width: auto;
+}
+
+.bem-vindos h2 {
+  font-size: 15px;
+  font-family: "Saira Condensed", sans-serif;
+  color: #e1e1e1;
+}
+
+/* arrumando o titulo da página (Catálogo) */
+.titulo {
+  text-align: center;
+  color: #144136;
+  font-size: 20px;
+  border-bottom: 2px solid #8fc1b5;
+  width: 70px;
+  margin: 0 auto;
+}
+
+section.loja > .navbar { /* os elementos dentro do elemento com a classe .navbar poderão se adequar de acordo com a tela do dispositivo em que a página está sendo exibida */
+  display: flex;
+}
+
+.loja { /* espaçamento de 30 pixels acima e abaixo do conteúdo do elemento, e nenhum espaçamento horizontal */
+  padding: 30px 0;
+}
+
+/* arrumando a parte do catálogo */
+.loja-conteudo {
+  width: 33.3%;
+  padding: 20px;
+}
+
+.categoria {
+  height: 400px;
+  border: 1.5px solid #144136;
+}
+
+.categoria img {
+  max-width: 100%;
+}
+
+.categoria p {
+  padding: 10px 9px;
+  text-align: center;
+}
+
+.categoria a:hover {
+  color: #ffff;
+}
+
+/* botão animado */
+button {
+  padding: 1.3em 3em;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #8fc1b5;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-left: 17% ;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #265c4b;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+/* arrumando a imagem de desconto */
+.barra img {
+  cursor: pointer; /* deixando a imagem com aspecto de clicável */
+  max-width: 100%; /* faznedo ela ocupar 100% do tamanho da tela */
+}
+
+/* arrumando e estilizando informações do endereço */
+.infos h4 {
+  color: #144136;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 80px;
+}
+
+.infos p {
+  text-align: center;
+  color: #144136;
+  font-size: 25px;
+  margin-top: 10px;
+  font-family: 'Bebas Neue';
+}
+
+/* barrinha animada */
+.fim {
+  animation: gradiente 10s ease infinite; /* animação aplicada no plano de fundo, componente para o código do keyframes funcionar */
+  align-items: center; /* centralizando o conteúdo verticalmente */
+  display: flex;
+  justify-content: center; /* centralizando o conteúdo horizontalmente */
+  background: linear-gradient(-45deg, #265c4b, #50867b, #235545, #8FC1B5)
+    no-repeat; /* comentário separado */
+  background-size: 300% 300%; /* define o tamanho do gradiente, a largura é definida como 30% da largura do elemento pai, e a altura é definida como 300% da altura do elemento pai */
+  height: 25vh;
+  margin-top: 80px;
+  max-width: 1440px;
+}
+
+@keyframes gradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fim p {
+  color: #e1e1e1;
+  text-align: center;
+}
+
+/* arrumando os icones das redes sociais */
+.icones {
+  display: flex; /* deixa o meu container flexível */
+  justify-content: center; /*  centraliza os ícones horizontalmente dentro do contêiner */
+}
+
+.imagens img {
+  padding: 10px; /* espaçamento entre meus ícones */
+}
+
+/* arrumando o texto dentro da barrinha */
+.fim h2, h3 {
+  text-align: center;
+  font-size: 15px;
+  color: #e1e1e1;
+  margin-top: 5px;
+}
+
+/* ---- abaixo tratando a responsividade ---- */
+
+@media screen and (max-width: 1024px){ /* definindo largura para o meu menu-mobile */
+  .menu-mobile{
+    display: block; /* deixando o menu visivel e em forma de bloco */
+  }
+
+  .menu-desktop {
+    display: none;/* ocultando o menu */
+  }
+}
